@@ -28,4 +28,12 @@ let createNewUser = async (req, res) => {
   return res.redirect ('/');
 };
 
-export default {getHomePage, createNewUser};
+let deleteUser = async (req, res) => {
+  await connection.execute ('delete from users where id = ?', [
+    req.body.userId,
+  ]);
+
+  return res.redirect ('/');
+};
+
+export default {getHomePage, createNewUser, deleteUser};
