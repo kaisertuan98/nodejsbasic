@@ -31,3 +31,12 @@ body {
   background-color: #04aa6d;
   color: white;
 }
+
+.form-submit {
+  padding-left: 15px;
+  text-align: center;
+}
+
+.form-submit .submit {
+  cursor: pointer;
+}

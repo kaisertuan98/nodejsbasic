@@ -4,8 +4,10 @@ import initWebRoute from './route/web.js';
 import configViewEngine from './configs/viewEngine.js';
 // import connection from './configs/connectDB.js';
 dotenv.config ();
-
 const app = express ();
+
+app.use (express.json ());
+app.use (express.urlencoded ({extended: true}));
 
 configViewEngine (app);
 initWebRoute (app);
